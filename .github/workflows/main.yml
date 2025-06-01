@@ -1,6 +1,9 @@
 name: Node.js CI
-
 on:
+  schedule:
+    # Runs every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:  # This enables the manual trigger button
   push:
     branches:
       - main
