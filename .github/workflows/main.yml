@@ -2,7 +2,7 @@ name: Node.js CI
 on:
   schedule:
     # Runs every 4 hours
-    - cron: '*/30 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:  # This enables the manual trigger button
   push:
     branches:
@@ -35,4 +35,4 @@ jobs:
     - name: Start application
       run: npm start &
     - name: Wait to exit
-      run: sleep 30m
+      run: sleep 5m
